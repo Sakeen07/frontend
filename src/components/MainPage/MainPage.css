@@ -1,0 +1,6 @@
+/* Mobile-specific styles */
+@media (max-width: 1060px) {
+    .chakra-stack {
+      flex-direction: column;
+    }
+  }

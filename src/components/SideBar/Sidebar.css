@@ -1,0 +1,117 @@
+/* Sidebar Container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-image: linear-gradient(#33323f, #55546a);
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Sidebar Top Section - Logo Area */
+.sidebar-top {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-top img {
+  height: 64px;
+  width: auto;
+}
+
+.sidebar-top h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-left: 10px;
+  padding-top: 14px;
+}
+
+/* Sidebar Center Section - Navigation Links */
+.sidebar-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.sidebar-center a {
+  display: block;
+  padding: 10px 16px;
+  margin: 4px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  font-size: 18px;
+}
+
+.sidebar-center svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.sidebar-center a:hover {
+  background-color: #e5e5eb;
+  color: #33323f;
+}
+
+/* Sidebar Bottom Section - User Profile */
+.sidebar-bottom {
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-bottom img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar-bottom p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Mobile Responsive Styles */
+.sidebar.mobile {
+  width: 240px;
+  transform: translateX(-100%);
+}
+
+.sidebar.mobile.open {
+  transform: translateX(0);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
+
+.sidebar-overlay.show {
+  display: block;
+}
